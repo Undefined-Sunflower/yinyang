@@ -1,0 +1,40 @@
+div#yinyang {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #ffffff 0%,#ffffff 50%,#000000 50%,#000000 50%,#000000 100%);
+  position: relative;
+  animation: 4s linear infinite yinyang;
+  margin: 150px auto;
+}
+div#yinyang::before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50px;
+  border: 35px solid #000000;
+}
+div#yinyang::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: #000000;
+  border-radius: 50%;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  border: 35px solid #ffffff;
+}
+@keyframes yinyang {
+  from {
+    transform: rotate(0deg);
+  }to {
+    transform: rotate(360deg);
+  }
+}
